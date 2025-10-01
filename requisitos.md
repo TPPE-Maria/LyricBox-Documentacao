@@ -166,7 +166,7 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
       <td style="border: 1px solid #444; padding: 12px;">Excluir conta do perfil</td>
     </tr>
     <tr>
-      <td rowspan="14" style="border: 1px solid #444; padding: 12px;">Explorar Catálogo</td>
+      <td rowspan="13" style="border: 1px solid #444; padding: 12px;">Explorar Catálogo</td>
       <td rowspan="3" style="border: 1px solid #444; padding: 12px;">Buscar mídia</td>
       <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 6</td>
       <td style="border: 1px solid #444; padding: 12px;">Buscar mídia por nome</td>
@@ -210,7 +210,7 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
       <td style="border: 1px solid #444; padding: 12px;">Visualizar reviews de outros usuários em mídia</td>
     </tr>
     <tr>
-      <td rowspan="4" style="border: 1px solid #444; padding: 12px;">Explorar artista</td>
+      <td rowspan="3" style="border: 1px solid #444; padding: 12px;">Explorar artista</td>
       <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 16</td>
       <td style="border: 1px solid #444; padding: 12px;">Buscar artista</td>
     </tr>
@@ -221,10 +221,6 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
     <tr>
       <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 18</td>
       <td style="border: 1px solid #444; padding: 12px;">Ver estatísticas do artista</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 19</td>
-      <td style="border: 1px solid #444; padding: 12px;">Visualizar reviews de artista escritos por outros usuários</td>
     </tr>
     <tr>
       <td rowspan="9" style="border: 1px solid #444; padding: 12px;">Reproduzir Mídia</td>
@@ -398,7 +394,7 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
       <td style="border: 1px solid #444; padding: 12px;">Remover foto do perfil</td>
     </tr>
     <tr>
-      <td rowspan="3" style="border: 1px solid #444; padding: 12px;">Explorar Catálogo</td>
+      <td rowspan="4" style="border: 1px solid #444; padding: 12px;">Explorar Catálogo</td>
       <td rowspan="2" style="border: 1px solid #444; padding: 12px;">Ver Recomendações</td>
       <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 54</td>
       <td style="border: 1px solid #444; padding: 12px;">Ver playlist de músicas ouvidas recentemente como sugestão</td>
@@ -411,6 +407,11 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
       <td rowspan="1" style="border: 1px solid #444; padding: 12px;">Buscar mídia</td>
       <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 56</td>
       <td style="border: 1px solid #444; padding: 12px;">Buscar playlist</td>
+    </tr>
+    <tr>
+      <td rowspan="1" style="border: 1px solid #444; padding: 12px;">Explorar Artista</td>
+      <td style="border: 1px solid #444; padding: 8px; text-align: center;">US 19</td>
+      <td style="border: 1px solid #444; padding: 12px;">Visualizar reviews de artista escritos por outros usuários</td>
     </tr>
     <tr>
       <td rowspan="1" style="border: 1px solid #444; padding: 12px;">Reproduzir mídia</td>
@@ -613,7 +614,6 @@ Essa combinação garantiu que o foco fosse mantido no **Mínimo Produto Viável
 | **US 16** | Buscar artista | Deve buscar Artistas pelo nome. | **S** |
 | **US 17** | Visualizar perfil do artista | Deve exibir informações do Artista. | **S** |
 | **US 18** | Ver estatísticas do artista | Deve exibir a nota média agregada de todas as Mídias do Artista. | **S** |
-| **US 19** | Visualizar reviews de artista escritos por outros usuários | Deve exibir reviews feitas sobre o Artista. | **S** |
 | **US 21** | Ajustar volume da mídia | Deve permitir alterar o volume do áudio. | **S** |
 | **US 22** | Ajustar linha do tempo da mídia | Deve permitir navegar na linha do tempo do áudio (arrastar). | **S** |
 | **US 29** | Marcar/Desmarcar mídia como favorita | Deve registrar/remover o status de Favorita no banco de dados. | **S** |
