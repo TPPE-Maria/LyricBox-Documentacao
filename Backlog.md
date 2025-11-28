@@ -4,30 +4,35 @@ A elicitação e priorização dos requisitos foram conduzidas utilizando duas m
 
 ## User Story Mapping
 
-O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa do usuário na plataforma. Ele permitiu desdobrar o sistema em seis **Temas** principais (as grandes áreas de valor), mapear as **Atividades** do usuário dentro de cada Tema (os Épicos) e, finalmente, detalhar as **Histórias de Usuário (US)**, que se tornaram os requisitos funcionais concretos. Essa estrutura hierárquica (Tema $\rightarrow$ Épico $\rightarrow$ US) é a base para o modelo de microserviços, onde cada Tema representa um potencial limite de serviço independente.
+O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa do usuário na plataforma. Ele permitiu desdobrar o sistema em quatro **Temas** principais implementados (as grandes áreas de valor), mapear as **Atividades** do usuário dentro de cada Tema (os Épicos) e, finalmente, detalhar as **Histórias de Usuário (US)** implementadas. Essa estrutura hierárquica (Tema $\rightarrow$ Épico $\rightarrow$ US) é a base para o modelo de microserviços atual.a representa um potencial limite de serviço independente.
 
 <!-- <div style="text-align: center;">
 <iframe width="768" height="496" src="https://miro.com/app/live-embed/uXjVJCLJwuA=/?focusWidget=3458764642080634350&embedMode=view_only_without_ui&embedId=512092104204" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 </div> -->
 
-### Temas
-| N° | Tema                        | Descrição                          |
-|----|-----------------------------|------------------------------------|
-| 1  | Gerir Conta                 | Microserviço de Usuário            |
-| 2  | Explorar Catálogo           | Microserviço de Catálogo/Busca     |
-| 3  | Reproduzir Mídia            | Microserviço de Player             |
-| 4  | Organizar Mídia             | Microserviço de Playlist           |
-| 5  | Avaliar Mídia               | Microserviço de Avaliação          |
-| 6  | Interagir com a Comunidade  | Microserviço Social                |
+### Temas Implementados
+| N° | Tema                        | Descrição                          | Status |
+|----|-----------------------------|------------------------------------|--------|
+| 1  | Gerir Conta                 | Auth-Service + User-Service        | **Implementado** |
+| 2  | Explorar Catálogo           | Media-Service                      | **Implementado** |
+| 3  | Avaliar Mídia               | Rating-Review-Service              | **Implementado** |
+| 4  | Interagir com a Comunidade  | User-Service + Rating-Review-Service | 🔄 **Parcialmente Implementado** |
 
-### Épicos
+### Temas Não Implementados
+| N° | Tema                        | Descrição                          | Status |
+|----|-----------------------------|------------------------------------|--------|
+| 3  | Reproduzir Mídia            | Player Service                     | ⏸️ **Não Implementado** |
+| 4  | Organizar Mídia             | Playlist Service                   | ⏸️ **Não Implementado** |
+
+### Épicos Implementados
 
 <table style="width:100%; border-collapse: collapse; color: #f0f0f0; background-color: #1e1e1e;">
   <thead>
     <tr>
       <th style="border: 1px solid #444; padding: 12px; text-align: center; width: 5%; background-color: #2c2c2c;">N°</th>
-      <th style="border: 1px solid #444; padding: 12px; text-align: left; width: 45%; background-color: #2c2c2c;">Tema</th>
-      <th style="border: 1px solid #444; padding: 12px; text-align: left; width: 50%; background-color: #2c2c2c;">Épico</th>
+      <th style="border: 1px solid #444; padding: 12px; text-align: left; width: 35%; background-color: #2c2c2c;">Tema</th>
+      <th style="border: 1px solid #444; padding: 12px; text-align: left; width: 35%; background-color: #2c2c2c;">Épico</th>
+      <th style="border: 1px solid #444; padding: 12px; text-align: center; width: 25%; background-color: #2c2c2c;">Status de Implementação</th>
     </tr>
   </thead>
   <tbody>
@@ -35,94 +40,67 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
       <td rowspan="4" style="border: 1px solid #444; padding: 12px; text-align: center;">1</td>
       <td rowspan="4" style="border: 1px solid #444; padding: 12px;">Gerir Conta</td>
       <td style="border: 1px solid #444; padding: 12px;">Registrar-se e autenticar-se</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Visualizar conta</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Editar conta</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Excluir conta</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
-      <td rowspan="5" style="border: 1px solid #444; padding: 12px; text-align: center;">2</td>
-      <td rowspan="5" style="border: 1px solid #444; padding: 12px;">Explorar Catálogo</td>
-      <td style="border: 1px solid #444; padding: 12px;">Ver Recomendações</td>
-    </tr>
-    <tr>
+      <td rowspan="4" style="border: 1px solid #444; padding: 12px; text-align: center;">2</td>
+      <td rowspan="4" style="border: 1px solid #444; padding: 12px;">Explorar Catálogo</td>
       <td style="border: 1px solid #444; padding: 12px;">Buscar mídia</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Aplicar filtro / ordenação</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Visualizar Detalhes da Mídia</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Explorar artista</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
-      <td rowspan="4" style="border: 1px solid #444; padding: 12px; text-align: center;">3</td>
-      <td rowspan="4" style="border: 1px solid #444; padding: 12px;">Reproduzir Mídia</td>
-      <td style="border: 1px solid #444; padding: 12px;">Iniciar e pausar mídia</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Controlar volume / tempo</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Exibir letra</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Gerenciar fila de reprodução</td>
-    </tr>
-    <tr>
-      <td rowspan="4" style="border: 1px solid #444; padding: 12px; text-align: center;">4</td>
-      <td rowspan="4" style="border: 1px solid #444; padding: 12px;">Organizar Mídia</td>
-      <td style="border: 1px solid #444; padding: 12px;">Criar playlist</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Gerenciar mídia em playlist</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Definir privacidade</td>
-    </tr>
-    <tr>
+      <td rowspan="1" style="border: 1px solid #444; padding: 12px; text-align: center;">3</td>
+      <td rowspan="1" style="border: 1px solid #444; padding: 12px;">Organizar Mídia</td>
       <td style="border: 1px solid #444; padding: 12px;">Marcar como Favorito</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
-      <td rowspan="5" style="border: 1px solid #444; padding: 12px; text-align: center;">5</td>
-      <td rowspan="5" style="border: 1px solid #444; padding: 12px;">Avaliar Mídia</td>
-      <td style="border: 1px solid #444; padding: 12px;">Avaliar mídia</td>
+      <td rowspan="3" style="border: 1px solid #444; padding: 12px; text-align: center;">4</td>
+      <td rowspan="3" style="border: 1px solid #444; padding: 12px;">Avaliar Mídia</td>
+      <td style="border: 1px solid #444; padding: 12px;">Avaliar mídia (Songs)</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Avaliar álbum</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Avaliar playlist</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Avaliar artista</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Ver estatísticas dos reviews</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
-      <td rowspan="5" style="border: 1px solid #444; padding: 12px; text-align: center;">6</td>
-      <td rowspan="5" style="border: 1px solid #444; padding: 12px;">Interagir com a Comunidade</td>
-      <td style="border: 1px solid #444; padding: 12px;">Visualizar Feed</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Interagir com reviews</td>
-    </tr>
-    <tr>
+      <td rowspan="2" style="border: 1px solid #444; padding: 12px; text-align: center;">5</td>
+      <td rowspan="2" style="border: 1px solid #444; padding: 12px;">Interagir com a Comunidade</td>
       <td style="border: 1px solid #444; padding: 12px;">Buscar usuário</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid #444; padding: 12px;">Seguir / Deixar de Seguir</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
     <tr>
       <td style="border: 1px solid #444; padding: 12px;">Visualizar Perfil do Usuário</td>
+      <td style="border: 1px solid #444; padding: 12px; text-align: center;">Completo</td>
     </tr>
   </tbody>
 </table>
@@ -578,66 +556,68 @@ O **User Story Mapping (USM)** foi empregado para visualizar a jornada completa 
   </tbody>
 </table>
 
-## Requisitos Funcionais Priorizados
+## Status de Implementação das Funcionalidades
 
-Para gerenciar o escopo e o prazo de dois meses, o método **MoSCoW** (Must Have, Should Have, Could Have) foi aplicado rigorosamente. Os 49 requisitos do MVP foram classificados para garantir que os esforços de desenvolvimento se concentrassem na entrega do valor essencial da plataforma:
+O desenvolvimento foi focado nos requisitos essenciais para criar um **MVP funcional** com as principais funcionalidades do LyricBox. A tabela abaixo mostra o **status atual de implementação** das User Stories planejadas:
 
-* **Must Have (M):** Requisitos essenciais, como **Registro de Usuário** e as funcionalidades básicas de **Avaliação** e **Visualização de Mídia**. Sem eles, o produto não pode ser lançado.
-* **Should Have (S):** Funcionalidades importantes, como **Busca Avançada**, **Criação de Playlists** e **Curtir Reviews**, que aprimoram a experiência de uso.
-* **Could Have (C):** Funcionalidades desejáveis, como a **Avaliação de Álbuns/Playlists** e a **Tradução de Letras**, que serão executadas apenas se o prazo e os recursos permitirem.
+**Legenda de Status:**
+* **IMPLEMENTADO:** Funcionalidade totalmente desenvolvida e testada
+* 🔄 **PARCIALMENTE IMPLEMENTADO:** Funcionalidade básica implementada, mas com limitações
+* ⏸️ **NÃO IMPLEMENTADO:** Funcionalidade não desenvolvida (fora do escopo atual)
+* ⚠️ **DEPENDÊNCIA:** Funcionalidade dependente de outras não implementadas
 
-Essa combinação garantiu que o foco fosse mantido no **Mínimo Produto Viável (MVP)**, que engloba a gestão de conta e o ciclo de avaliação social.
+O foco atual contempla: **Gestão de Usuários**, **Catálogo Musical**, **Sistema de Avaliações** e **Funcionalidades Sociais Básicas**.
 
-| N°        | História de Usuário | Critério de Aceitação | Prioridade |
-| :---:     | :--- | :--- | :---: |
-| **US 1**  | Criar conta | Deve registrar o usuário com e-mail e senha. | **M** |
-| **US 2**  | Realizar login com usuário e senha | Deve autenticar e iniciar a sessão do usuário. | **M** |
-| **US 49** | Visualizar perfil de usuário | Deve exibir o perfil básico de qualquer usuário e seus dados públicos. | **M** |
-| **US 7**  | Buscar mídia por artista | Deve retornar Mídias cujo Artista corresponda ao termo de busca. | **M** |
-| **US 13** | Visualizar dados básicos da mídia | Deve exibir título, artista, álbum, e descrição da Mídia. | **M** |
-| **US 31** | Cadastrar nota de mídia | Deve registrar a nota (1 a 5 estrelas) no banco de dados, associada ao Usuário e à Mídia. | **M** |
-| **US 34** | Publicar review de mídia | Deve permitir a submissão de texto (review) associado à Mídia e ao Usuário. | **M** |
-| **US 14** | Visualizar nota da mídia | Deve exibir a nota média agregada da Mídia (depende de US 31). | **M** |
-| **US 15** | Visualizar reviews de outros usuários em mídia | Deve exibir reviews e o nome/perfil do Usuário que as publicou. | **M** |
-| **US 20** | Controlar reprodução da mídia | Deve ter botões funcionais de play/pause. | **M** |
-| **US 23** | Visualizar letra da mídia | Deve exibir o texto da letra (estático) na tela de reprodução. | **M** |
-| **US 4**  | Editar dados do perfil | Deve permitir a alteração de dados básicos (nome de exibição) após o login. | **S** |
-| **US 46** | Curtir reviews | Deve registrar o "curtir" no banco, incrementando o contador da Review. | **S** |
-| **US 5**  | Excluir conta do perfil | Deve deletar a conta e todos os dados associados (Reviews, Notas). | **S** |
-| **US 3**  | Visualizar dados do perfil | Deve exibir os dados básicos do perfil logado. | **S** |
-| **US 32** | Visualizar nota dada em mídia | Deve exibir a nota que o usuário logado deu àquela Mídia. | **S** |
-| **US 35** | Visualizar review de mídia | Deve exibir a review que o usuário logado escreveu. | **S** |
-| **US 6**  | Buscar mídia por nome | Deve retornar Mídias pelo título. | **S** |
-| **US 8**  | Buscar álbum | Deve retornar Álbuns pelo nome. | **S** |
-| **US 9**  | Filtrar pesquisa por gênero | Deve aplicar filtro para limitar resultados ao Gênero selecionado. | **S** |
-| **US 10** | Filtrar pesquisa por nota | Deve aplicar filtro para limitar resultados pela Nota Média mínima. | **S** |
-| **US 16** | Buscar artista | Deve buscar Artistas pelo nome. | **S** |
-| **US 17** | Visualizar perfil do artista | Deve exibir informações do Artista. | **S** |
-| **US 18** | Ver estatísticas do artista | Deve exibir a nota média agregada de todas as Mídias do Artista. | **S** |
-| **US 21** | Ajustar volume da mídia | Deve permitir alterar o volume do áudio. | **S** |
-| **US 22** | Ajustar linha do tempo da mídia | Deve permitir navegar na linha do tempo do áudio (arrastar). | **S** |
-| **US 29** | Marcar/Desmarcar mídia como favorita | Deve registrar/remover o status de Favorita no banco de dados. | **S** |
-| **US 30** | Visualizar suas mídias favoritas | Deve exibir a lista de Mídias favoritas. | **S** |
-| **US 33** | Excluir nota de mídia | Deve remover a nota registrada no banco. | **S** |
-| **US 36** | Excluir review de mídia | Deve remover a review registrada no banco. | **S** |
-| **US 43** | Ver nota média de mídia específica | Deve calcular e exibir a nota média da Mídia. | **S** |
-| **US 44** | Ver nota média do artista de acordo com suas mídias | Deve calcular e exibir a nota média agregada do Artista. | **S** |
-| **US 45** | Ver nota média de álbums de um artista | Deve calcular e exibir a nota média agregada do Álbum. | **S** |
-| **US 37** | Cadastrar nota de álbum | Deve registrar a nota para o Álbum. | **S** |
-| **US 38** | Visualizar nota dada em álbum | Deve exibir a nota do usuário para o Álbum. | **S** |
-| **US 39** | Excluir nota de álbum | Deve remover a nota do Álbum. | **S** |
-| **US 40** | Publicar review de álbum | Deve registrar a review para o Álbum. | **S** |
-| **US 41** | Visualizar review de álbum | Deve exibir a review do usuário para o Álbum. | **S** |
-| **US 42** | Excluir review de álbum | Deve remover a review do Álbum. | **S** |
-| **US 11** | Ordenar pesquisa por nome | Deve ordenar os resultados da busca pelo nome. | **S** |
-| **US 12** | Ordenar pesquisa por nota | Deve ordenar os resultados da busca pela nota média. | **S** |
-| **US 24** | Visualizar tradução da letra da mídia | Deve exibir o texto traduzido da letra. | **S** |
-| **US 25** | Ver fila de reprodução | Deve exibir a lista de Mídias na fila. | **S** |
-| **US 26** | Adicionar mídia à fila de reprodução | Deve permitir adicionar Mídia à lista de reprodução. | **S** |
-| **US 27** | Remover mídia de fila de reprodução | Deve permitir remover Mídia da lista de reprodução. | **S** |
-| **US 28** | Alterar ordem de mídia na fila de reprodução | Deve permitir reordenar as Mídias na fila. | **S** |
-| **US 47** | Buscar usuário por nome de usuário | Deve retornar Usuários pelo nome de usuário. | **S** |
-| **US 48** | Buscar usuário por nome | Deve retornar Usuários pelo nome completo (se disponível). | **S** |
+| N°        | História de Usuário | Status | Implementação |
+| :---:     | :--- | :---: | :--- |
+| **US 1**  | Criar conta | | Auth-Service + User-Service |
+| **US 2**  | Realizar login com usuário e senha | | Auth-Service com JWT |
+| **US 3**  | Visualizar dados do perfil | | User-Service `/users/me` |
+| **US 4**  | Editar dados do perfil | | User-Service `PUT /users/me` |
+| **US 5**  | Excluir conta do perfil | | User-Service `DELETE /users/me` |
+| **US 6**  | Buscar mídia por nome | | Media-Service `/songs/search` |
+| **US 7**  | Buscar mídia por artista | | Media-Service `/songs/by-artist` |
+| **US 8**  | Buscar álbum | | Media-Service `/albums/search` |
+| **US 11** | Ordenar pesquisa por nome | 🔄 | Via query params `sort=name,asc/desc` |
+| **US 12** | Ordenar pesquisa por nota | 🔄 | Rating-Service `/ratings/songs/order-by-rating` |
+| **US 13** | Visualizar dados básicos da mídia | | Media-Service `/songs/{id}` |
+| **US 14** | Visualizar nota da mídia | | Rating-Service `/ratings/song/{id}/average` |
+| **US 15** | Visualizar reviews de outros usuários em mídia | | Rating-Service `/reviews/song/{id}` |
+| **US 16** | Buscar artista | | Media-Service `/artists/search` |
+| **US 17** | Visualizar perfil do artista | | Media-Service `/artists/{id}` |
+| **US 18** | Ver estatísticas do artista | | Media-Service `/artists/{id}/stats` + Rating-Service |
+| **US 29** | Marcar/Desmarcar mídia como favorita | | Media-Service `POST /songs/{id}/favorite` |
+| **US 30** | Visualizar suas mídias favoritas | | Media-Service `/songs/favorites` |
+| **US 31** | Cadastrar nota de mídia | | Rating-Service `POST /ratings` |
+| **US 32** | Visualizar nota dada em mídia | | Rating-Service `/ratings/my-rating/{songId}` |
+| **US 33** | Excluir nota de mídia | | Rating-Service `DELETE /ratings/{songId}` |
+| **US 34** | Publicar review de mídia | | Rating-Service `POST /reviews` |
+| **US 35** | Visualizar review de mídia | | Rating-Service `/reviews/my-review/{songId}` |
+| **US 36** | Excluir review de mídia | | Rating-Service `DELETE /reviews/{songId}` |
+| **US 43** | Ver nota média de mídia específica | | Rating-Service `/ratings/song/{id}/average` |
+| **US 44** | Ver nota média do artista de acordo com suas mídias | | Rating-Service `/ratings/artist/{id}/average` |
+| **US 45** | Ver nota média de álbums de um artista | | Rating-Service `/ratings/album/{id}/average` |
+| **US 47** | Buscar usuário por nome de usuário | | User-Service `/users/search` |
+| **US 48** | Buscar usuário por nome | | User-Service `/users/search` |
+| **US 49** | Visualizar perfil de usuário | | User-Service `/users/{id}` (admin) |
+| **US 9**  | Filtrar pesquisa por gênero | ⚠️ | Requer implementação de gêneros no Media-Service |
+| **US 10** | Filtrar pesquisa por nota | 🔄 | Rating-Service `/ratings/songs/filter-by-rating` |
+| **US 37** | Cadastrar nota de álbum | ⚠️ | Depende de avaliação direta de álbuns |
+| **US 38** | Visualizar nota dada em álbum | ⚠️ | Depende de avaliação direta de álbuns |
+| **US 39** | Excluir nota de álbum | ⚠️ | Depende de avaliação direta de álbuns |
+| **US 40** | Publicar review de álbum | ⚠️ | Depende de review direto de álbuns |
+| **US 41** | Visualizar review de álbum | ⚠️ | Depende de review direto de álbuns |
+| **US 42** | Excluir review de álbum | ⚠️ | Depende de review direto de álbuns |
+| **US 20** | Controlar reprodução da mídia | ⏸️ | Player não implementado |
+| **US 21** | Ajustar volume da mídia | ⏸️ | Player não implementado |
+| **US 22** | Ajustar linha do tempo da mídia | ⏸️ | Player não implementado |
+| **US 23** | Visualizar letra da mídia | ⏸️ | Campo lyrics não implementado |
+| **US 24** | Visualizar tradução da letra da mídia | ⏸️ | Feature de tradução não implementada |
+| **US 25** | Ver fila de reprodução | ⏸️ | Player não implementado |
+| **US 26** | Adicionar mídia à fila de reprodução | ⏸️ | Player não implementado |
+| **US 27** | Remover mídia de fila de reprodução | ⏸️ | Player não implementado |
+| **US 28** | Alterar ordem de mídia na fila de reprodução | ⏸️ | Player não implementado |
+| **US 46** | Curtir reviews | ⏸️ | Sistema de likes não implementado |
 
 ## Requisitos Não Funcionais
 
